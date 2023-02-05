@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Habibi&family=Oswald:wght@400;500&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --default-bg: rgb( 150, 150, 90);
+  --default-color: rgba( 255, 255, 255, 0.7);
+}
+.black {
+  --default-bg: rgb(20, 20, 20);
+  --default-color: rgba( 255, 255, 0, 1);
+}
+body {
+  background-color: var(--default-bg);
+  color: var(--default-color);
+  height: 100vh;
+  font-family: 'Oswald', sans-serif;
+}
+main {
+  height: 100%;
+  text-align: center;
+}
+h1 {
+  width: 50%;
+  margin: auto;
+  margin-top: 2%;
+  border-radius: 8px;
+  background-color: rgba( 255, 255, 255, 0.2);
+}
+/* TIC TAC TOE GAME TABLE 
+///////////////////////////
+*/
+.board {
+  width: 45vw;
+  height: 45vw;
+  margin: auto;
+  position: relative;
+  top: 15vh;
+  display: grid;
+  grid-template-areas: "1 2 3" "4 5 6" "7 8 9";
+}
+.cell {
+  width: 15vw;
+  height: 15vw;
+  border: 1px solid var(--default-color);
+  font-size: 10vw;
+  display: grid;
+  place-items: center;
+  font-family: 'Habibi', serif;
+}
+/* INDIVIDUAL CELLS
+////////////////////
+*/
+section .cell:nth-child(1),
+section .cell:nth-child(2),
+section .cell:nth-child(3) {
+  border-top: none;
+}
+
+section .cell:nth-child(3),
+section .cell:nth-child(6),
+section .cell:nth-child(9) {
+  border-right: none;
+}
+
+section .cell:nth-child(9),
+section .cell:nth-child(8),
+section .cell:nth-child(7) {
+  border-bottom: none;
+}
+
+section .cell:nth-child(1),
+section .cell:nth-child(4),
+section .cell:nth-child(7) {
+  border-left: none;
+}
+/* RESULT WINDOWS 
+/////////////////////
+*/
+.resultWindows {
+  width: 100%;
+  position: absolute;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.resultWindows button {
+  margin-top: 10%;
+  padding: 4% 8%;
+  border: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: rgba( 0, 0, 0, 0.6);
+  color: white;
+  transition: background-color 0.2s;
+}
+.resultWindows button:hover {
+  background-color: rgba( 0, 0, 0, 0.1);
+}
+#playerOneWindow, #playerTwoWindow, #drawWindow {
+  background-color: rgba( 0, 0, 0, 0.6);
+  position: fixed;
+  top: 25vh;
+  padding: 10%;
+  border-radius: 25px;
+  font-size: larger;
+  visibility: hidden;
+}
+/* THEMES
+/////////////////////
+*/
+#themes {
+  position: fixed;
+  bottom: 4vh;
+  left: 4vh;
+}
+#themes button {
+  width: 5vh;
+  height: 5vh;
+  border: none;
+  border: 1px solid white;
+  cursor: pointer;
+}
+#themes button:nth-child(1) {
+  background-color: rgb( 130, 130, 70);
+}
+#themes button:nth-child(2) {
+  background-color: rgb( 30, 30, 30);
+}
+#themes button:nth-child(1):hover {
+  background-color: rgba( 130, 130, 70, 0.5);
+}
+#themes button:nth-child(2):hover {
+  background-color: rgba( 30, 30, 30, 0.5);
+}
