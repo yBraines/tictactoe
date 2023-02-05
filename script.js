@@ -3,6 +3,8 @@ const resultWindows = document.querySelector('.resultWindows').addEventListener(
 const themes = document.querySelector('#themes').addEventListener('click', themesFunction)
 let cells = document.getElementsByClassName('cell');
 
+// THEME VERIFY
+document.querySelector('html').classList.add(localStorage.class);
 
 let turn = true;
 let turnCount = 0;
@@ -101,8 +103,10 @@ function themesFunction(choose) {
   if(choose.target.classList == "default") {
     document.querySelector('html').classList.add("default");
     document.querySelector('html').classList.remove("black");
+    localStorage.class = "default";
   } else if(choose.target.classList == "black") {
     document.querySelector('html').classList.add("black");
     document.querySelector('html').classList.remove("default");
+    localStorage.class = "black";
   }
 }
