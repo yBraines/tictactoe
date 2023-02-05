@@ -139,22 +139,6 @@ section .cell:nth-child(7) {
 /* RESPONSIVNESS
 ///////////////////////
 */
-@media (max-width: 590px) {
-  .board {
-    height: 30vh;
-    width: 30vh;
-  }
-  .cell {
-    width: 10vh;
-    height: 10vh;
-    font-size: 5vw;
-  }
-}
-@media (max-width: 300px) {
-  h1 {
-    font-size: medium;
-  }
-}
 @media (max-height: 1000px) {
   .board {
     height: 45vh;
@@ -163,5 +147,22 @@ section .cell:nth-child(7) {
   .cell {
     height: 15vh;
     width: 15vh;
+    font-size: 10vh;
+  }
+}
+@media (max-width: 590px) {
+  .board {
+    height: 30vh;
+    width: 30vh;
+  }
+  .cell {
+    width: 10vh;
+    height: 10vh;
+    font-size: 5vh;
+  }
+}
+@media (max-width: 300px) {
+  h1 {
+    font-size: medium;
   }
 }
