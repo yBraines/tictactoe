@@ -139,30 +139,14 @@ section .cell:nth-child(7) {
 /* RESPONSIVNESS
 ///////////////////////
 */
-@media (max-height: 1000px) {
-  .board {
-    height: 45vh;
-    width: 45vh;
-  }
-  .cell {
-    height: 15vh;
-    width: 15vh;
-    font-size: 10vh;
-  }
-}
-@media (max-width: 590px) {
+@media (max-width: 500px) {
   .board {
     height: 30vh;
     width: 30vh;
   }
   .cell {
-    width: 10vh;
     height: 10vh;
-    font-size: 5vh;
-  }
-}
-@media (max-width: 300px) {
-  h1 {
-    font-size: medium;
+    width: 10vh;
+    font-size: 8vh;
   }
 }
